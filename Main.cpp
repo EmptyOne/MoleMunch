@@ -1,5 +1,5 @@
 // main.cpp : Defines the entry point for the console application.
-//
+//HEJSAN
 
 #include "stdafx.h"
 
