@@ -26,19 +26,22 @@ int main(int argc, char* argv[])
 	sf::Sprite moveVeg(vegetable);
 	moveVeg.setPosition(playerS.getPosition());
 
-	int ammo = 0;
-	sf::Time vegTimer = sf::seconds(0.01f);
 	sf::Clock clock;
-	float dT = 1.f / 60.f;
-	float speed = 5.f;
+	int ammo = 0;
+	
+	
+	
 
-	sf::FloatRect windowBox = bg.getGlobalBounds();
-	sf::FloatRect boundingBox = playerS.getGlobalBounds();
-	sf::FloatRect boundingBox2 = vegetableS.getGlobalBounds();
-	sf::FloatRect vegBox = moveVeg.getGlobalBounds();
+
 
 	while (window.isOpen())
 	{
+
+		sf::FloatRect windowBox = bg.getGlobalBounds();
+		sf::FloatRect boundingBox = playerS.getGlobalBounds();
+		sf::FloatRect boundingBox2 = vegetableS.getGlobalBounds();
+		sf::FloatRect vegBox = moveVeg.getGlobalBounds();
+		sf::Time vegTimer = clock.getElapsedTime();
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
@@ -83,13 +86,24 @@ int main(int argc, char* argv[])
 			playerS.move(0, 0.5);
 			sf::Vector2f position = playerS.getPosition();
 		}
+		
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
-			moveVeg.move(4, 0);
-			window.draw(moveVeg);
+			std::cout << vegTimer.asSeconds() << std::endl;
+			while (vegTimer.asSeconds() < 10 && vegBox.intersects(windowBox) && ammo != 0)
+			{			
+				moveVeg.move(1, 0);
+				window.draw(moveVeg);
+				//ammo--;
+			}
+			if (vegTimer.asSeconds() > 15)
+			{
+				moveVeg.setPosition(playerS.getPosition());
+				vegTimer = clock.restart();
 
-			dT = clock.restart().asSeconds();
-
+			}
+			
+			
 		}
 
 
@@ -98,6 +112,7 @@ int main(int argc, char* argv[])
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 			{
+				
 				vegetableS.setPosition(-500, -500);
 				ammo++;
 			}
