@@ -44,6 +44,11 @@ int main(int argc, char* argv[])
 				window.close();
 		}
 
+		sf::View view(sf::FloatRect(100, 100, 500, 400));
+		view.setCenter(64, 64);
+		view.move(playerS.getPosition());
+		window.setView(view);
+
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 		{
 			window.close();
@@ -55,10 +60,36 @@ int main(int argc, char* argv[])
 		window.draw(bg);
 
 
+<<<<<<< HEAD
 
 
 
 		
+=======
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		{
+			playerS.move(-3, 0);
+			sf::Vector2f position = playerS.getPosition();
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		{
+			playerS.move(3, 0);
+			sf::Vector2f position = playerS.getPosition();
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+		{
+			playerS.move(0, -3);
+			sf::Vector2f position = playerS.getPosition();
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		{
+			playerS.move(0, 3);
+			sf::Vector2f position = playerS.getPosition();
+		}
+>>>>>>> origin/master
 		
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
