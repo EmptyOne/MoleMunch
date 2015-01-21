@@ -25,12 +25,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="Player.h">
 =======
     <ClInclude Include="GameState.h">
 >>>>>>> origin/master
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> parent of 63f9dac... Player2.0
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -40,11 +43,14 @@
       <Filter>Source Files</Filter>
     </ClCompile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="Player.cpp">
 =======
     <ClCompile Include="GameState.cpp">
 >>>>>>> origin/master
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> parent of 63f9dac... Player2.0
   </ItemGroup>
 </Project>

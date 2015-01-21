@@ -1,4 +1,5 @@
-//main.cpp
+// main.cpp : Defines the entry point for the console application.
+
 
 #include "stdafx.h"
 
@@ -29,6 +30,10 @@ int main(int argc, char* argv[])
 	int ammo = 0;
 	
 	
+	
+
+
+
 	while (window.isOpen())
 	{
 
@@ -64,32 +69,52 @@ int main(int argc, char* argv[])
 
 
 
+<<<<<<< HEAD
 		
 =======
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
 			playerS.move(-3, 0);
+=======
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		{
+			playerS.move(-0.5, 0);
+>>>>>>> parent of 63f9dac... Player2.0
 			sf::Vector2f position = playerS.getPosition();
 		}
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
+<<<<<<< HEAD
 			playerS.move(3, 0);
+=======
+			playerS.move(0.5, 0);
+>>>>>>> parent of 63f9dac... Player2.0
 			sf::Vector2f position = playerS.getPosition();
 		}
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
+<<<<<<< HEAD
 			playerS.move(0, -3);
+=======
+			playerS.move(0, -0.5);
+>>>>>>> parent of 63f9dac... Player2.0
 			sf::Vector2f position = playerS.getPosition();
 		}
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 		{
+<<<<<<< HEAD
 			playerS.move(0, 3);
 			sf::Vector2f position = playerS.getPosition();
 		}
 >>>>>>> origin/master
+=======
+			playerS.move(0, 0.5);
+			sf::Vector2f position = playerS.getPosition();
+		}
+>>>>>>> parent of 63f9dac... Player2.0
 		
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
