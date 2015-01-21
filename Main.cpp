@@ -1,5 +1,4 @@
-// main.cpp : Defines the entry point for the console application.
-
+//main.cpp
 
 #include "stdafx.h"
 
@@ -30,10 +29,6 @@ int main(int argc, char* argv[])
 	int ammo = 0;
 	
 	
-	
-
-
-
 	while (window.isOpen())
 	{
 
@@ -63,29 +58,7 @@ int main(int argc, char* argv[])
 
 
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-		{
-			playerS.move(-0.5, 0);
-			sf::Vector2f position = playerS.getPosition();
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-		{
-			playerS.move(0.5, 0);
-			sf::Vector2f position = playerS.getPosition();
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-		{
-			playerS.move(0, -0.5);
-			sf::Vector2f position = playerS.getPosition();
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-		{
-			playerS.move(0, 0.5);
-			sf::Vector2f position = playerS.getPosition();
-		}
+		
 		
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
